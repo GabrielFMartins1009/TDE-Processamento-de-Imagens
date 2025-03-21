@@ -48,3 +48,20 @@ C:\Users\Gabriel\Desktop\noa\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-w
 C:\Users\Gabriel\Desktop\noa\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.pdb
 C:\Users\Gabriel\Desktop\noa\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.genruntimeconfig.cache
 C:\Users\Gabriel\Desktop\noa\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\ref\TDE.dll
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.Form1.resources
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.csproj.GenerateResource.cache
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.AssemblyInfoInputs.cache
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.AssemblyInfo.cs
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.csproj.CoreCompileInputs.cache
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.sourcelink.json
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.dll
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\refint\TDE.dll
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.pdb
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.exe
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.deps.json
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.runtimeconfig.json
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.dll
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.pdb
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.genruntimeconfig.cache
+C:\Users\Computacao\Desktop\Nova pasta\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\ref\TDE.dll
