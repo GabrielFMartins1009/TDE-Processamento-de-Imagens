@@ -36,7 +36,7 @@
             label1 = new Label();
             numericUpDownBLUE = new NumericUpDown();
             numericUpDownGREEN = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
+            numericUpDownRED = new NumericUpDown();
             trackBarBLUE = new TrackBar();
             trackBarGREEN = new TrackBar();
             trackBarRED = new TrackBar();
@@ -74,7 +74,7 @@
             groupBoxCMYK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownBLUE).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownGREEN).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRED).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBarBLUE).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBarGREEN).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBarRED).BeginInit();
@@ -116,7 +116,7 @@
             // trackBarH
             // 
             trackBarH.Location = new Point(109, 18);
-            trackBarH.Maximum = 255;
+            trackBarH.Maximum = 360;
             trackBarH.Name = "trackBarH";
             trackBarH.Size = new Size(104, 45);
             trackBarH.TabIndex = 30;
@@ -174,7 +174,6 @@
             // numericUpDownS
             // 
             numericUpDownS.Location = new Point(60, 80);
-            numericUpDownS.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             numericUpDownS.Name = "numericUpDownS";
             numericUpDownS.Size = new Size(43, 23);
             numericUpDownS.TabIndex = 25;
@@ -183,7 +182,6 @@
             // numericUpDownV
             // 
             numericUpDownV.Location = new Point(60, 130);
-            numericUpDownV.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             numericUpDownV.Name = "numericUpDownV";
             numericUpDownV.Size = new Size(43, 23);
             numericUpDownV.TabIndex = 24;
@@ -192,7 +190,7 @@
             // numericUpDownH
             // 
             numericUpDownH.Location = new Point(60, 30);
-            numericUpDownH.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            numericUpDownH.Maximum = new decimal(new int[] { 360, 0, 0, 0 });
             numericUpDownH.Name = "numericUpDownH";
             numericUpDownH.Size = new Size(43, 23);
             numericUpDownH.TabIndex = 23;
@@ -201,7 +199,7 @@
             // trackBarS
             // 
             trackBarS.Location = new Point(109, 69);
-            trackBarS.Maximum = 255;
+            trackBarS.Maximum = 100;
             trackBarS.Name = "trackBarS";
             trackBarS.Size = new Size(104, 45);
             trackBarS.TabIndex = 22;
@@ -210,7 +208,7 @@
             // trackBarV
             // 
             trackBarV.Location = new Point(109, 120);
-            trackBarV.Maximum = 255;
+            trackBarV.Maximum = 100;
             trackBarV.Name = "trackBarV";
             trackBarV.Size = new Size(104, 45);
             trackBarV.TabIndex = 21;
@@ -253,7 +251,7 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Controls.Add(numericUpDownBLUE);
             tabPage1.Controls.Add(numericUpDownGREEN);
-            tabPage1.Controls.Add(numericUpDown1);
+            tabPage1.Controls.Add(numericUpDownRED);
             tabPage1.Controls.Add(trackBarBLUE);
             tabPage1.Controls.Add(trackBarGREEN);
             tabPage1.Controls.Add(trackBarRED);
@@ -351,7 +349,7 @@
             label3.BorderStyle = BorderStyle.FixedSingle;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label3.ForeColor = Color.Blue;
-            label3.Location = new Point(18, 92);
+            label3.Location = new Point(18, 143);
             label3.Name = "label3";
             label3.Size = new Size(41, 17);
             label3.TabIndex = 11;
@@ -364,7 +362,7 @@
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label2.ForeColor = Color.Lime;
-            label2.Location = new Point(9, 142);
+            label2.Location = new Point(9, 91);
             label2.Name = "label2";
             label2.Size = new Size(50, 17);
             label2.TabIndex = 10;
@@ -385,7 +383,7 @@
             // 
             // numericUpDownBLUE
             // 
-            numericUpDownBLUE.Location = new Point(63, 90);
+            numericUpDownBLUE.Location = new Point(63, 141);
             numericUpDownBLUE.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             numericUpDownBLUE.Name = "numericUpDownBLUE";
             numericUpDownBLUE.Size = new Size(43, 23);
@@ -394,25 +392,25 @@
             // 
             // numericUpDownGREEN
             // 
-            numericUpDownGREEN.Location = new Point(63, 140);
+            numericUpDownGREEN.Location = new Point(63, 89);
             numericUpDownGREEN.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             numericUpDownGREEN.Name = "numericUpDownGREEN";
             numericUpDownGREEN.Size = new Size(43, 23);
             numericUpDownGREEN.TabIndex = 7;
             numericUpDownGREEN.ValueChanged += NumericUpDownGREEN_ValueChanged;
             // 
-            // numericUpDown1
+            // numericUpDownRED
             // 
-            numericUpDown1.Location = new Point(63, 40);
-            numericUpDown1.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(43, 23);
-            numericUpDown1.TabIndex = 6;
-            numericUpDown1.ValueChanged += NumericUpDown1_ValueChanged;
+            numericUpDownRED.Location = new Point(63, 40);
+            numericUpDownRED.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            numericUpDownRED.Name = "numericUpDownRED";
+            numericUpDownRED.Size = new Size(43, 23);
+            numericUpDownRED.TabIndex = 6;
+            numericUpDownRED.ValueChanged += NumericUpDown1_ValueChanged;
             // 
             // trackBarBLUE
             // 
-            trackBarBLUE.Location = new Point(112, 79);
+            trackBarBLUE.Location = new Point(112, 130);
             trackBarBLUE.Maximum = 255;
             trackBarBLUE.Name = "trackBarBLUE";
             trackBarBLUE.Size = new Size(104, 45);
@@ -421,7 +419,7 @@
             // 
             // trackBarGREEN
             // 
-            trackBarGREEN.Location = new Point(112, 130);
+            trackBarGREEN.Location = new Point(112, 79);
             trackBarGREEN.Maximum = 255;
             trackBarGREEN.Name = "trackBarGREEN";
             trackBarGREEN.Size = new Size(104, 45);
@@ -670,7 +668,7 @@
             groupBoxCMYK.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownBLUE).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownGREEN).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownRED).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBarBLUE).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBarGREEN).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBarRED).EndInit();
@@ -720,7 +718,7 @@
         private Label label1;
         private NumericUpDown numericUpDownBLUE;
         private NumericUpDown numericUpDownGREEN;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDownRED;
         private TrackBar trackBarBLUE;
         private TrackBar trackBarGREEN;
         private TrackBar trackBarRED;

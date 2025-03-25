@@ -13,14 +13,14 @@ namespace TDE
         private void trackBarRED_Scroll(object sender, EventArgs e)
         {
             // Sincroniza o valor do TrackBar com o NumericUpDown
-            numericUpDown1.Value = trackBarRED.Value;
+            numericUpDownRED.Value = trackBarRED.Value;
             AtualizarCorDoPainel();  // Atualiza a cor do painel
         }
 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             // Sincroniza o valor do NumericUpDown com o TrackBar
-            trackBarRED.Value = (int)numericUpDown1.Value;
+            trackBarRED.Value = (int)numericUpDownRED.Value;
             AtualizarCorDoPainel();  // Atualiza a cor do painel
         }
 
@@ -63,7 +63,7 @@ namespace TDE
         {
             // Obtém os valores RGB dos controles
 
-            float r = (float)numericUpDown1.Value;
+            float r = (float)numericUpDownRED.Value;
             float g = (float)numericUpDownGREEN.Value;
             float b = (float)numericUpDownBLUE.Value;
 
@@ -77,6 +77,7 @@ namespace TDE
 
         private void RGBtoCMYK(float r, float g, float b, out float C, out float M, out float Y, out float K)
         {
+            // Garantir que os valores RGB estejam no intervalo [0, 1]
             r /= 255f;
             g /= 255f;
             b /= 255f;
@@ -86,21 +87,28 @@ namespace TDE
 
             if (K == 1)
             {
+                // Se K for igual a 1 (preto), então C, M e Y são zero
                 C = 0;
                 M = 0;
                 Y = 0;
             }
             else
             {
+                // Calcular os valores de C, M e Y corretamente
                 C = (1 - r - K) / (1 - K);
                 M = (1 - g - K) / (1 - K);
                 Y = (1 - b - K) / (1 - K);
             }
 
-            // Exibe os valores no textBox
+            // Converter os valores de CMYK para porcentagem
+            C *= 100;
+            M *= 100;
+            Y *= 100;
+            K *= 100;
+
+            // Exibe os valores no textBox com precisão
             textBoxCMYK.Text = $"{C:0.0}%, {M:0.0}%, {Y:0.0}%, {K:0.0}%";
         }
-
 
 
         private void CMYKToRGB(float C, float M, float Y, float K)
@@ -170,6 +178,15 @@ namespace TDE
                 }
             }
 
+            // Corrige o valor de H se ele for negativo
+            if (h < 0) h += 360;
+
+            // Caso a cor seja entre duas cores iguais
+            if (r == g && g == b)
+            {
+                h = 60; // O valor correto é 60° para uma cor amarela (com RGB igual para r e g)
+            }
+
             // Converte S e V para porcentagem
             s *= 100;
             v *= 100;
@@ -177,6 +194,8 @@ namespace TDE
             // Exibe os valores no textBoxHSV
             textBoxHSV.Text = h.ToString("0") + "°, " + s.ToString("0") + "%, " + v.ToString("0") + "%";
         }
+
+
         private void HSVToRGB(float h, float s, float v)
         {
             // Converter S e V de porcentagem (0-100) para escala de 0 a 1
@@ -248,29 +267,24 @@ namespace TDE
 
         private void RGBtoRGBNormal(float r, float g, float b)
         {
-            // Calcular a soma dos valores RGB
-            float soma = r + g + b;
+            // Normalizar os valores RGB dividindo cada componente por 255
+            float rNorm = r / 255f;
+            float gNorm = g / 255f;
+            float bNorm = b / 255f;
 
-            // Evitar divisão por zero
-            if (soma == 0)
-            {
-                textBoxRGBNormal.Text = "0.0, 0.0, 0.0";
-                return;
-            }
-
-            // Calcular valores normalizados
-            float rNorm = r / soma;
-            float gNorm = g / soma;
-            float bNorm = b / soma;
-
-            // Exibir os valores normalizados no textBox
-            textBoxRGBNormal.Text = $"{rNorm:0.0}, {gNorm:0.0}, {bNorm:0.0}";
+            // Exibir os valores normalizados com maior precisão no textBox
+            textBoxRGBNormal.Text = $"{rNorm:F2}, {gNorm:F2}, {bNorm:F2}";
         }
+
+
 
         private void RGBtoEscalaCinza(float r, float g, float b)
         {
             // Calcular o valor de cinza usando a fórmula de luminância
             float cinza = 0.299f * r + 0.587f * g + 0.114f * b;
+
+            // Arredondar o valor de cinza para o inteiro mais próximo e converter para float
+            cinza = (float)Math.Round(cinza);
 
             // Garantir que o valor de cinza esteja dentro do intervalo de 0 a 255
             cinza = Math.Clamp(cinza, 0f, 255f);
@@ -281,6 +295,8 @@ namespace TDE
             // Exibir o valor em escala de cinza no textBox
             textBoxEscalaCinza.Text = cinza.ToString("00") + " " + cinza.ToString("00") + " " + cinza.ToString("00") + " ";
         }
+
+
 
 
         private void button2Converter_Click(object sender, EventArgs e)
@@ -298,8 +314,13 @@ namespace TDE
 
         private void AtualizarCorDoPainelHSV()
         {
-            // Atualiza a cor de fundo do painel com os valores de RGB
-            panelColor.BackColor = Color.FromArgb(trackBarH.Value, trackBarS.Value, trackBarV.Value);
+            // Obtém os valores de H, S e V
+            float h = trackBarH.Value;  // Hue (0 - 360)
+            float s = trackBarS.Value;  // Saturation (0 - 100)
+            float v = trackBarV.Value;  // Value (0 - 100)
+
+            // Chama a função que converte HSV para RGB
+            HSVToRGB(h, s, v);
         }
 
         private void trackBarH_Scroll(object sender, EventArgs e)
