@@ -107,7 +107,7 @@ namespace TDE
             K *= 100;
 
             // Exibe os valores no textBox com precisão
-            textBoxCMYK.Text = $"{C:0.0}%, {M:0.0}%, {Y:0.0}%, {K:0.0}%";
+            textBoxCMYK.Text = Convert.ToInt32(C).ToString() + "% " + Convert.ToInt32(M).ToString() + "% " + Convert.ToInt32(Y).ToString() + "% " + Convert.ToInt32(K).ToString() + "% ";
         }
 
 
@@ -140,8 +140,6 @@ namespace TDE
             // Atualizar a cor do painel na interface
             panel3.BackColor = Color.FromArgb(rInt, gInt, bInt);
         }
-
-
 
         private void RGBToHSV(float r, float g, float b)
         {
@@ -273,15 +271,13 @@ namespace TDE
             float bNorm = b / 255f;
 
             // Exibir os valores normalizados com maior precisão no textBox
-            textBoxRGBNormal.Text = $"{rNorm:F2}, {gNorm:F2}, {bNorm:F2}";
+            textBoxRGBNormal.Text = rNorm.ToString ("F2") + " " + gNorm.ToString ("F2") + " " + bNorm.ToString ("F2");
         }
-
-
 
         private void RGBtoEscalaCinza(float r, float g, float b)
         {
             // Calcular o valor de cinza usando a fórmula de luminância
-            float cinza = 0.299f * r + 0.587f * g + 0.114f * b;
+            float cinza = (r + g + b) / 3;
 
             // Arredondar o valor de cinza para o inteiro mais próximo e converter para float
             cinza = (float)Math.Round(cinza);
@@ -289,15 +285,9 @@ namespace TDE
             // Garantir que o valor de cinza esteja dentro do intervalo de 0 a 255
             cinza = Math.Clamp(cinza, 0f, 255f);
 
-            // Atualizar o painel com a cor em escala de cinza
-            panelColor.BackColor = Color.FromArgb((int)cinza, (int)cinza, (int)cinza);
-
             // Exibir o valor em escala de cinza no textBox
-            textBoxEscalaCinza.Text = cinza.ToString("00") + " " + cinza.ToString("00") + " " + cinza.ToString("00") + " ";
+            textBoxEscalaCinza.Text = cinza.ToString() + " " + cinza.ToString() + " " + cinza.ToString() + " ";
         }
-
-
-
 
         private void button2Converter_Click(object sender, EventArgs e)
         {

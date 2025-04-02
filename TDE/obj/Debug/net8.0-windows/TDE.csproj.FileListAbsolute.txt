@@ -82,3 +82,20 @@ C:\Users\Gabriel\Desktop\Pasta Certa Cores\TDE-Processamento-de-Imagens\TDE\obj\
 C:\Users\Gabriel\Desktop\Pasta Certa Cores\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.pdb
 C:\Users\Gabriel\Desktop\Pasta Certa Cores\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.genruntimeconfig.cache
 C:\Users\Gabriel\Desktop\Pasta Certa Cores\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\ref\TDE.dll
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.exe
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.deps.json
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.runtimeconfig.json
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.dll
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\bin\Debug\net8.0-windows\TDE.pdb
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.Form1.resources
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.csproj.GenerateResource.cache
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.AssemblyInfoInputs.cache
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.AssemblyInfo.cs
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.csproj.CoreCompileInputs.cache
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.sourcelink.json
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.dll
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\refint\TDE.dll
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.pdb
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\TDE.genruntimeconfig.cache
+D:\Desktop\TDE\TDE-Processamento-de-Imagens\TDE\obj\Debug\net8.0-windows\ref\TDE.dll
